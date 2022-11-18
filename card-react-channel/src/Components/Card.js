@@ -1,6 +1,8 @@
 import React from "react";
 import "./Card.css";
 import productImageSrc from "./image/image-product-desktop.jpg";
+import BlocPrice from "./BlocPrice";
+import products from "./Data";
 
 const Card = (props) => {
   return (
@@ -16,16 +18,12 @@ const Card = (props) => {
           <h2>{props.productTitle}</h2>
           <div className="description">{props.productContent}</div>
         </header>
-        <div className="price-bloc">
-          <div className="price">
-            <div className="sale-price">{props.salePrice}</div>
-            <div className="original-price">{props.price}</div>
-          </div>
-          <button>
-            <img src="./image/icon-cart.svg" alt="" />
-            <p>Add to cart</p>
-          </button>
-        </div>
+
+        <BlocPrice
+          key={props.index}
+          price={props.price}
+          salePrice={props.salePrice}
+        />
       </div>
     </div>
   );
