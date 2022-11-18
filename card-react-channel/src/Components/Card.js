@@ -1,8 +1,10 @@
 import React from "react";
 import "./Card.css";
 import productImageSrc from "./image/image-product-desktop.jpg";
-import BlocPrice from "./BlocPrice";
-import products from "./Data";
+import CardHeader from "./CardProductHeader";
+import CardFooter from "./CardProductFooter";
+import Products from "./CardProductData";
+import CartButton from "./CartButton";
 
 const Card = (props) => {
   return (
@@ -13,17 +15,12 @@ const Card = (props) => {
         alt={props.productImage}
       />
       <div className="content">
-        <header>
-          <div className="category">{props.category}</div>
-          <h2>{props.productTitle}</h2>
-          <div className="description">{props.productContent}</div>
-        </header>
-
-        <BlocPrice
-          key={props.index}
-          price={props.price}
-          salePrice={props.salePrice}
+        <CardHeader
+          category={props.category}
+          productTitle={props.title}
+          productContent={props.content}
         />
+        <CardFooter salePrice={props.salePrice} price={props.price} />
       </div>
     </div>
   );

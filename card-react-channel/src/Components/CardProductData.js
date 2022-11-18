@@ -1,4 +1,4 @@
-const products = [
+const Products = [
   {
     //image: { productImageSrc },
     category: "PERFUME",
@@ -19,4 +19,4 @@ const products = [
   },
 ];
 
-export default products;
+export default Products;

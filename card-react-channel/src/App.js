@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Card from "./Components/Card";
 //import productImageSrc from "./Components/image/image-product-desktop.jpg";
-import products from "./Components/Data";
+import products from "./Components/CardProductData";
 
 const App = () => {
   return (
@@ -14,8 +14,8 @@ const App = () => {
             key={index}
             productImage={product.image}
             category={product.category}
-            productTitle={product.title}
-            productContent={product.content}
+            title={product.title}
+            content={product.content}
             price={product.price}
             salePrice={product.salePrice}
           />
